@@ -1,0 +1,12 @@
+.App {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.app-title {
+    font-size: 45px;
+}
+
+.selected-color {
+    font-size: 24px;
+}

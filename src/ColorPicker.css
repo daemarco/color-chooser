@@ -1,0 +1,14 @@
+.color-picker {
+    display: inline;
+    margin: 10px;
+}
+
+.colpicker-input {
+    display: inline;
+    font-size: 25px;
+    margin: 5px;
+}
+
+.colpicker-btn {
+    font-size: 25px;
+}
