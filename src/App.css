@@ -7,6 +7,13 @@
     font-size: 45px;
 }
 
-.selected-color {
-    font-size: 24px;
+.color-picker {
+    display: inline;
+    margin: 10px;
+}
+
+.colpicker-input {
+    display: inline;
+    font-size: 25px;
+    margin: 5px;
 }

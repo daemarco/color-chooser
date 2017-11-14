@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import ColorPicker from './ColorPicker';
+import { Form, FormControl, Button } from 'react-bootstrap';
+import Colored from './Colored';
 
 class App extends Component {
 
@@ -9,16 +10,31 @@ class App extends Component {
         super(props);
         //In ReactJS a state is always an object
         this.state = {
-            color: ''
+            color: '',
+            newColor: ''
         };
+    }
+
+    changeColor = function(){
+        this.setState({color: this.state.newColor});
     }
 
     render() {
         return (
             <div className="App">
-                <div className="app-title">Color Chooser</div>
-                <div className="selected-color">Your favourite Color is: {this.state.color}</div>
-                <ColorPicker />
+                <div className="app-title">Color Chooser</div>                
+                <Colored
+                    selColor={this.state.color} />
+                <Form inline>
+                    <FormControl
+                        placeholder="Choose a Color"
+                        className="colpicker-input"
+                        onChange={event => this.setState({newColor: event.target.value})}
+                    />
+                    <Button
+                      onClick={() => this.changeColor()}
+                    >Select</Button>
+                </Form>
             </div>
         )
     }
